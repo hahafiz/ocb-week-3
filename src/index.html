@@ -22,25 +22,25 @@
       </div>
     </div>
   
-    <div id="formContainer">
+    <form id="formContainer" method="post" action="https://httpbin.org/post">
       <h2>REGISTER YOUR BOOK</h2>
   
       <div class="heading">
         <p>Book Details</p>
       </div>
   
-      <form id="bookDetails">
+      <div id="bookDetails">
         <div id="bookTitle">
           <label for="title">Title</label>
-          <input type="text" id="title" name="title" placeholder="Your book title here. E.g. Harry Potter and The Fantastic Bootcamp">
+          <input type="text" id="title" name="title" placeholder="Your book title here. E.g. Harry Potter and The Fantastic Bootcamp" required>
         </div>
         <div id="bookGenre">
           <label for="genre">Genre</label>
-          <input type="text" id="genre" name="genre" placeholder="Your book genre here. E.g. Fantasy">
+          <input type="text" id="genre" name="genre" placeholder="Your book genre here. E.g. Fantasy" required>
         </div>
         <div id="bookAuthor">
           <label for="author">Author</label>
-          <input type="text" id="author" name="author" placeholder="Your book author here. E.g. J. K. Rowling">
+          <input type="text" id="author" name="author" placeholder="Your book author here. E.g. J. K. Rowling" required>
         </div>
         <div id="bookPublisher">
           <label for="publisher">Publisher</label>
@@ -48,7 +48,7 @@
         </div>
         <div id="bookYear">
           <label for="year">Year</label>
-          <input type="number" id="year" name="year" placeholder="1994">
+          <input type="number" id="year" name="year" placeholder="1994" min="1" max="2024" required>
         </div>
         <div id="bookAvailability">
           <label for="available">Availability</label>
@@ -69,19 +69,19 @@
         </div>
         <div id="bookPages">
           <label for="pages">Pages</label>
-          <input type="number" id="pages" name="pages" placeholder="514">
+          <input type="number" id="pages" name="pages" placeholder="514" required>
         </div>
         <div id="bookLanguage">
           <label for="language">Language</label>
-          <input type="text" id="language" name="language" placeholder="Language used in the book. E.g. English">
+          <input type="text" id="language" name="language" placeholder="Language used in the book. E.g. English" required>
         </div>
-      </form>
+      </div>
       
       <div class="heading">
         <p>Registree Details</p>
       </div>
       
-      <form id="registreeDetails">
+      <div id="registreeDetails">
         <div>
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name. E.g. Lannah Yeon">
@@ -90,15 +90,15 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Your email. E.g. I.yeon@email.com">
         </div>
-      </form>
+      </div>
   
-      <form id="consent">
-        <input type="checkbox" id="agree" name="agree">
+      <div id="consent">
+        <input type="checkbox" id="agree" name="agree" required>
         <label for="agree">I hereby agree to follow all rules and confirmed that all details are accurate</label>
-      </form>
+      </div>
   
-      <button>SAVE YOUR BOOK</button>
-    </div>
+      <button type="submit">SAVE YOUR BOOK</button>
+    </form>
   </div>
 
   <div id="footerContainer">
